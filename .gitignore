@@ -1,0 +1,73 @@
+# Object files
+*.o
+*.ko
+*.obj
+*.elf
+*.bin
+*.pyc
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Libraries
+*.lib
+*.a
+*.la
+*.lo
+
+# Shared objects (inc. Windows DLLs)
+*.dll
+*.so
+*.so.*
+*.dylib
+
+# Executables
+*.exe
+*.out
+*.app
+*.i*86
+*.x86_64
+*.hex
+
+# Debug files
+*.dSYM/
+
+# Makefile objects
+*.d
+
+# Eclipse, VSCode, etc., project files and directories
+.project
+.cproject
+.settings
+language.settings.xml
+*.launch
+.vscode
+
+# Other files and directories
+*.xls
+*.xlsx
+*.pdf
+*.csv
+*.h5
+*.rhistory
+Makefile.mine
+test
+tests
+
+# mbed object files and libraries should be versioned
+!lpc1768/mbed/TARGET_LPC1768/TOOLCHAIN_GCC_ARM/*.o
+!lpc1768/mbed/TARGET_LPC1768/TOOLCHAIN_GCC_ARM/*.a
+lpc1768/main_wcrt.cpp
+!frdm-k64f/mbed/TARGET_K64F/TOOLCHAIN_GCC_ARM/*.o
+!frdm-k64f/mbed/TARGET_K64F/TOOLCHAIN_GCC_ARM/*.a
+frdm-k64f/main_wcrt.cpp
+
+# test config files
+!main-config.json
+!test-config.json
+*.json
+
+# build directory
+build
+.build
