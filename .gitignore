@@ -64,8 +64,8 @@ lpc1768/main_wcrt.cpp
 frdm-k64f/main_wcrt.cpp
 
 # test config files
-!main-config.json
-!test-config.json
+!main-config-tmpl.json
+!test-config-tmpl.json
 *.json
 
 # build directory
