@@ -1,0 +1,40 @@
+{
+    "target": {
+        "platform": "lpc1768",
+        "baudrate": 115200,
+        "project": {
+            "build": true,
+            "build_options": [
+                "BAUD=115200"
+            ]
+        },
+        "board": {
+            "auto": true,
+            "flash": true
+        }
+    },
+    "test": {
+        "methods": [
+            "rta",
+            "rta2",
+            "rta3",
+            "rta4",
+            "het2"
+        ],
+        "test_type": "cpu_cycles_usecs",
+        "task_metric": false,
+        "data": [
+            {
+                "file": "file.h5",
+                "keys": [
+                    "/key"
+                ],
+                "where": "tdist='r1' & trange='t25_1000' & ntask=10 & rts_id<=100"
+            }
+        ]
+    },
+    "save": {
+        "file": "resultados.h5",
+        "key": "/test1"
+    }
+}

@@ -1,0 +1,33 @@
+{
+    "project": {
+        "make_path": "/path/to/make",
+        "toolchain_path": "/path/to/toolchain",
+        "bin_file": "mbed_wcrt.bin",
+        "lpc1768": {
+            "path": "lpc1768",
+            "bin_path": ".build"
+        },
+        "frdm-k64f": {
+            "path": "frdm-k64f",
+            "bin_path": "BUILD"
+        }
+    },
+    "test": {
+        "supported_methods": {
+            "het": 0,
+            "het2": 1,
+            "rta": 2,
+            "rta2": 3,
+            "rta3": 4,
+            "rta4": 5
+        },
+        "supported_tests": {
+            "usecs": "TEST_TYPE=1",
+            "cpu_cycles": "TEST_TYPE=2",
+            "cpu_cycles_usecs": "TEST_TYPE=4",
+            "ceils": "TEST_TYPE=5",
+            "cpu_cycles_summation": "TEST_TYPE=6",
+            "cpu_cycles_summation_wcet": "TEST_TYPE=7"
+        }
+    }
+}
