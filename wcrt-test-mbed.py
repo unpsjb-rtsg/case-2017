@@ -189,11 +189,8 @@ def save_to_hdfs(args, board_info, df):
         print("Results saved in {0} store as {1}.".format(save.file, save.key))
 
 
-def build_project(maincfg, testcfg):    
-    make_path = "make"
-
-    if maincfg.project.has_key("make_path"):
-        make_path = os.path.join(maincfg.project.make_path, "make")
+def build_project(maincfg, testcfg):
+    make_path = os.path.join(maincfg.project.make_path, "make") if maincfg.project.has_key("make_path") else "make"
 
     methods_to_test = ":".join([str.upper("TEST_{0}".format(m)) for m in testcfg.test.methods])
 
@@ -347,12 +344,12 @@ def main():
         except KeyError as e:            
             pass  # ok!
 
+    # select the mbed board and retrieve the serial port connection
+    mbed_board_info = configure_board(maincfg, testcfg.target)
+
     # build the target project
     if testcfg.target.project.build:
         build_project(maincfg, testcfg)
-    
-    # select the mbed board and retrieve the serial port connection
-    mbed_board_info = configure_board(maincfg, testcfg.target)
 
     # open the specified serial port
     ser = serial.Serial(port=mbed_board_info['serial_port'], baudrate=testcfg.target.baudrate,
