@@ -344,13 +344,13 @@ def main():
         except KeyError as e:            
             pass  # ok!
 
-    # select the mbed board and retrieve the serial port connection
-    mbed_board_info = configure_board(maincfg, testcfg.target)
-
     # build the target project
     if testcfg.target.project.build:
         build_project(maincfg, testcfg)
 
+    # select the mbed board and retrieve the serial port connection
+    mbed_board_info = configure_board(maincfg, testcfg.target)
+    
     # open the specified serial port
     ser = serial.Serial(port=mbed_board_info['serial_port'], baudrate=testcfg.target.baudrate,
                         timeout=0.5, write_timeout=0.5, xonxoff=True, dsrdtr=True)
