@@ -1,5 +1,7 @@
 # RTA4
-This repository contains the programs developed for evaluating the schedulability analysis algorithm RTA4, presented in the paper *A New RM/DM Low Cost Schedulability Test* (CASE 2017).
+This repository contains the programs developed for evaluating the schedulability analysis algorithm RTA4, presented in the paper [*A New RM/DM Low Cost Schedulability Test*](https://ieeexplore.ieee.org/document/8115368/):
+
+* J. M. Urriza, F. E. Páez, M. Ferrari, R. Cayssials and J. D. Orozco, "A new RM/DM low cost schedulability test," 2017 Eight Argentine Symposium and Conference on Embedded Systems (CASE), Buenos Aires, 2017, pp. 1-6. doi: [10.23919/SASE-CASE.2017.8115368](https://doi.org/10.23919/SASE-CASE.2017.8115368).
 
 ## Program description
 ### `wcrt-test-mbed.py`
