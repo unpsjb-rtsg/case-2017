@@ -15,9 +15,14 @@ This program perform the evaluation of multiple schedulability algorithms on a m
 This program generate a summary of the test reults performed with `wcrt-test-mbed.py` and save it as an Excel file.
 
 ### `wcrt-test-sim.c`
-This program evaluates multiple schedulability analysis algorithms through simulations on a PC. To compile this program, the following libraries should be installed:
+This program evaluates multiple schedulability analysis algorithms through simulations on a PC. The following libraries are required:
 * [GNU Scientific Library](https://www.gnu.org/software/gsl/).
 * [Libxml2](http://xmlsoft.org/) library.
+
+To compile the program:
+```
+gcc -o wcrt-test-sim wcrt-test-sim.c -Wall -I/usr/include/libxml2 -L/usr/lib/i386-linux-gnu -lxml2 -lgsl -lgslcblas -lm
+```
 
 ### `wcrt-test-sim.py`
 Same as `wcrt-test-sim.c` but implemented in Python.
